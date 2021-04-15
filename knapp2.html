@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <title>Arbetsprov för Webbbyrå Stockholm</title>
+</head>
+<style>
+    html, body {
+   padding: 0;
+   margin: 0;
+   width: 100%;
+   height: 100%;
+}
+body {
+   /* text-align: center; */
+   background-color: #222;
+   color: #fff;
+   font-family: 'Nunito', sans-serif;
+   line-height: 1.5;
+}
+a {
+   color: rgb(110, 164, 226);
+   text-decoration: none;
+}
+main {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction:column;
+        align-items: flex-end;
+        height: 99%;
+}
+.btn {
+   margin:5px 20px 20px;
+   padding: 10px 20px;
+   border: 1px solid rgb(110, 164, 226);
+   background-color: transparent;
+   border-radius: 10em;
+   font-size: 45px;
+   width:auto;
+    cursor: pointer;
+   transition: .3s;
+}
+.btn:hover {
+   background-color: rgb(110, 164, 226);
+   color: #222;
+}
+.popup {
+   text-align: right;
+   padding-right: 1rem;
+   margin:5px 20px 10px;
+   width: 17rem;
+   border-radius: 0.5em;
+   color: #000;
+   background-color: rgba(255,255,255,1);
+   visibility: hidden;
+   opacity: 0;
+   transition: opacity .5s, visibility 0s linear .5s;
+   z-index: 1;
+}
+
+.info {
+   text-align: left;
+   padding-left: 2rem;
+   padding-bottom:1rem;
+}
+
+.popup:target {
+   visibility: visible;
+   opacity: 1;
+   transition-delay: 0s;
+}
+.popup .close {
+
+   color: black;
+   transition: color .3s;
+   font-size: 2em;
+   line-height: 1.5;
+   font-weight: 700;
+}
+.popup .close:hover {
+   color: #f00;
+   
+}
+.close-popup {
+   
+   background-color: rgba(0,0,0,.7);
+   cursor: default;
+   position: fixed;
+   top:0;
+   left:0;
+   right:0;
+   bottom:0;
+   opacity: 0;
+   visibility: hidden;
+   transition: opacity .5s, visibility 0s linear .5s;
+}
+.popup:target + .close-popup {
+   opacity: 1;
+   visibility: visible;
+   transition-delay: 0s;
+   
+}
+</style>
+<body>
+<main>
+    <!-- Modulen -->
+    <div id="popup" class="popup">
+        <a href="#" class="close">&times;</a>
+        
+        <div class = "info">
+           <h3>Våra kontaktuppgifter!</h3>
+        <p>Webbyrå Stockholm<br>
+        Åsögatan 80, 
+        118 29 Stockholm<br>
+                    
+        <a href="tel:+46708425588">Telefon: +46 (0)70-842 55 88</a><br>
+        <a href="mailto:info@webbyra-stockholm.nu">info@webbyra-stockholm.nu</a></p>
+      </div>
+   </div>
+
+    <!-- Skuggningen -->
+    <a href="#" class="close-popup"></a> 
+
+    <!-- Brev-symbolen -->
+    <a href="#popup" class="btn"><i class="fa fa-envelope"></i>
+    </a>
+
+</main>
+</body>
+</html>
