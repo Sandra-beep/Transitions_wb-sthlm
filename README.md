@@ -1,2 +1,2 @@
-# arbetsprov_wb-sthlm
-Ett arbetsprov till Webbbyrå Stockholm
+# About
+A work assignment to test my transitions skills!
